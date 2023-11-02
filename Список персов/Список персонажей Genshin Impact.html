@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+       Список персонажей Genshin Impact
+    </title>
+</head>
+<body bgcolor="#f5d4ae">
+    <h4 align=left><a href="Самые популярные персонажи Genshin Impact.html">Самые популярные персонажи Genshin Impact.</a></h4>
+    <h1>Список персонажей Genshin Impact</h1>
+    <hr align="center" width="90%" color="yellow" size="3">
+
+    <details>
+  <summary>График </summary>
+<table cellspacing="10">
+<tp align="center">
+<td>    
+<form>
+  <p>
+    <b>Значения по оси ОХ</b><br>
+    <input  type="radio"  name="OX" value="R">Регион<br>
+    <input  type="radio"  name="OX" value="O">Оружие<br>
+    <input  type="radio"  name="OX" value="S">Стихия
+  </p>
+</form></td>
+<td>
+<form>
+<legend align="center"><b>Результат</b></legend>
+  <input type="checkbox" name="grafik" value="0"> Сила атаки <br>
+  <input type="checkbox" name="grafik" value="1"> Популярность <br>
+  <input type="checkbox" name="grafik" value="2"> Эффективность в бездне <br>
+</form></td></tp></table>
+<p><input type="submit" value="Построить"></p>
+<p>*Здесь будет график*</p>
+</details>
+
+<details>
+    <summary>Фильтр</summary>
+    <form>
+<p>Имя:
+  <input type="text" name="name" id="name"></p>
+
+    <p><label>Регион:
+    <select id="Region">
+ <option value="0">Мондштарт</option>
+ <option value="1">Ли Юэ</option>
+ <option value="2">Инадзума</option>
+ <option value="3">Сумеру</option>
+ <option value="4">Фонтейн</option>
+ <option value="5">Снежная</option>
+</select>
+   </label></p>
+<p><label>Редкость:<input type="number" id="Redc" min="4" max="5"></label></p>
+<p><label>Стихия:
+    <select id="Stixia">
+ <option value="0">Анемо</option>
+ <option value="1">Гео</option>
+ <option value="2">Гидро</option>
+ <option value="3">Дендро</option>
+ <option value="4">Крио</option>
+ <option value="5">Пиро</option>
+ <option value="6">Электро</option>
+</select>
+   </label></p>
+
+<p><label>Оружие:
+    <select id="Oryjie">
+ <option value="0">Одноручный меч</option>
+ <option value="1">Двуручный меч</option>
+ <option value="2">Катализатор</option>
+ <option value="3">Копьё</option>
+ <option value="4">Лук</option>
+</select>
+   </label></p>
+
+<p><label>Сила атаки: от<input type="number" id="Cula1" min="1">до<input type="number" id="Cula2" min="1"></label></p>
+<p><label>Популярность: от<input type="number" id="Popul1" min="1">до<input type="number" id="Popul2" min="1"></label></p>
+<p><label>Эффективность в бездне: от<input type="number" id="Bezd1" min="0">до<input type="number" id="Bezd2" min="0"></label></p>
+<p><input type="reset" value="Очистить всё"></p>
+<p><input type="reset" value="Найти"></p>
+</details>
+
+<details>   <summary>Сортировка</summary>
+   <form> <p><label>Первый уровень:
+    <select id="FirstL">
+ <option value="0">Нет</option>
+ <option value="1">Имя</option>
+ <option value="2">Регион</option>
+ <option value="3">Редкость</option>
+ <option value="4">Стихия</option>
+ <option value="5">Оружие</option>
+ <option value="6">Сила атаки</option>
+ <option value="7">Популярность</option>
+ <option value="8">Эффективность в бездне</option>
+</select>
+<legend>по убыванию?</legend>
+  <input type="checkbox" name="FirstL-" value="0">
+</form>
+   </label></p>
+
+<form><p><label>Второй уровень:
+    <select id="SecondL">
+ <option value="0">Нет</option>
+ <option value="1">Имя</option>
+ <option value="2">Регион</option>
+ <option value="3">Редкость</option>
+ <option value="4">Стихия</option>
+ <option value="5">Оружие</option>
+ <option value="6">Сила атаки</option>
+ <option value="7">Популярность</option>
+ <option value="8">Эффективность в бездне</option>
+</select>
+<legend>по убыванию?</legend>
+  <input type="checkbox" name="SecondL-" value="0">
+</form> 
+   </label></p>
+
+<form><p><label>Третий уровень:
+    <select id="SirthL">
+ <option value="0">Нет</option>
+ <option value="1">Имя</option>
+ <option value="2">Регион</option>
+ <option value="3">Редкость</option>
+ <option value="4">Стихия</option>
+ <option value="5">Оружие</option>
+ <option value="6">Сила атаки</option>
+ <option value="7">Популярность</option>
+ <option value="8">Эффективность в бездне</option>
+</select>
+<legend>по убыванию?</legend>
+  <input type="checkbox" name="SirthL-" value="0">
+</form>  
+</label></p>
+
+<p><input type="reset" value="Сортировать"></p></details>
+
+
+
+   <table border="1" align="center" cellspacing="0" cellpadding="2">
+  <tr align="center">
+     <th> <B>Имя</B></th>
+     <th> <B>Иконка</B></th>
+     <th> <B>Регион</B></th>
+     <th> <B>Редкость</B></th>
+     <th> <B>Стихия</B></th>
+     <th> <B>Оружие</B></th>
+     <th> <B>Сила атаки</B></th>
+     <th> <B>Популярность</B></th>
+     <th> <B>Эффективность в бездне</B></th>
+  </tr>
+  <tr align="center">
+     <td> Альбедо</td>
+     <td> <img src="Картинки/albedo-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Гео</td>
+     <td> Одноручный меч</td>
+     <td>251</td>
+     <td>19</td>
+     <td>5</td>
+  </tr>
+  <tr align="center">
+     <td> Аль-Хайтам</td>
+     <td> <img src="Картинки/alhaitham-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Дендро</td>
+     <td> Одноручный меч</td>
+     <td>313</td>
+     <td>12</td>
+     <td>40,9</td>
+  </tr>
+  <tr align="center">
+     <td> Аяка</td>
+     <td> <img src="Картинки/kamisato-ayaka-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Крио</td>
+     <td> Одноручный меч</td>
+     <td>342</td>
+     <td>1</td>
+     <td>44,9</td>
+  </tr>
+  <tr align="center">
+     <td> Аято</td>
+     <td> <img src="Картинки/kamisato-ayato-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Одноручный меч</td>
+     <td>298</td>
+     <td>25</td>
+     <td>24,1</td>
+  </tr>
+  <tr align="center">
+     <td> Бай Джу</td>
+     <td> <img src="Картинки/baizhu.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Дендро</td>
+     <td> Катализатор</td>
+     <td>192</td>
+     <td>32</td>
+     <td>53,5</td>
+  </tr>
+  <tr align="center">
+     <td> Барбара</td>
+     <td> <img src="Картинки/barbara-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Гидро</td>
+     <td> Катализатор</td>
+     <td>159</td>
+     <td>54</td>
+     <td>3,8</td>
+  </tr>
+  <tr align="center">
+     <td> Беннет</td>
+     <td> <img src="Картинки/bennett-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Пиро</td>
+     <td> Одноручный меч</td>
+     <td>191</td>
+     <td>3</td>
+     <td>88,6</td>
+  </tr>
+  <tr align="center">
+     <td> Бэй Доу</td>
+     <td> <img src="Картинки/beidou-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Гео</td>
+     <td> Двуручный меч</td>
+     <td>225</td>
+     <td>40</td>
+     <td>1,4</td>
+  </tr>
+  <tr align="center">
+     <td> Венти</td>
+     <td> <img src="Картинки/venti-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Анемо</td>
+     <td> Лук</td>
+     <td>263</td>
+     <td>22</td>
+     <td>19,3</td>
+  </tr>
+  <tr align="center">
+     <td> Гань Юй</td>
+     <td> <img src="Картинки/ganyu-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Крио</td>
+     <td> Лук</td>
+     <td>334</td>
+     <td>29</td>
+     <td>12,2</td>
+  </tr>
+  <tr align="center">
+     <td> Горо</td>
+     <td> <img src="Картинки/gorou-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Гео</td>
+     <td> Лук</td>
+     <td>182</td>
+     <td>59</td>
+     <td>2</td>
+  </tr>
+  <tr align="center">
+     <td> Джинн</td>
+     <td> <img src="Картинки/jean-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Анемо</td>
+     <td> Одноручный меч</td>
+     <td>256</td>
+     <td>42</td>
+     <td>5,4</td>
+  </tr>
+  <tr align="center">
+     <td> Дилюк</td>
+     <td> <img src="Картинки/diluc-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Пиро</td>
+     <td> Двуручный меч</td>
+     <td>239</td>
+     <td>35</td>
+     <td>2,3</td>
+  </tr>
+  <tr align="center">
+     <td> Диона</td>
+     <td> <img src="Картинки/diona-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Лук</td>
+     <td>334</td>
+     <td>37</td>
+     <td>9,7</td>
+  </tr>
+  <tr align="center">
+     <td> Дори</td>
+     <td> <img src="Картинки/dori-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 4</td>
+     <td> Электро</td>
+     <td> Двуручный меч</td>
+     <td>212</td>
+     <td>58</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Дэхья</td>
+     <td> <img src="Картинки/dehya.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Пиро</td>
+     <td> Двуручный меч</td>
+     <td>223</td>
+     <td>64</td>
+     <td>3,7</td>
+  </tr>
+  <tr align="center">
+     <td> Е Лань</td>
+     <td> <img src="Картинки/yelan-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Лук</td>
+     <td>243</td>
+     <td>11</td>
+     <td>72,7</td>
+  </tr>
+  <tr align="center">
+     <td> Ёимия</td>
+     <td> <img src="Картинки/yoimiya-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Пиро</td>
+     <td> Лук</td>
+     <td>2322</td>
+     <td>15</td>
+     <td>18,5</td>
+  </tr>
+  <tr align="center">
+     <td> Итто</td>
+     <td> <img src="Картинки/arataki-itto-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Гео</td>
+     <td> Двуручный меч</td>
+     <td>227</td>
+     <td>20</td>
+     <td>8,2</td>
+  </tr>
+  <tr align="center">
+     <td> Кавех</td>
+     <td> <img src="Картинки/avataricon-kaveh.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 4</td>
+     <td> Дендро</td>
+     <td> Двуручный меч</td>
+     <td>233</td>
+     <td>45</td>
+     <td>0,5</td>
+  </tr>
+  <tr align="center">
+     <td> Кадзуха</td>
+     <td> <img src="Картинки/kaedehara-kazuha-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Анемо</td>
+     <td> Одноручный меч</td>
+     <td>296</td>
+     <td>9</td>
+     <td>90,9</td>
+  </tr>
+  <tr align="center">
+     <td> Кандакия</td>
+     <td> <img src="Картинки/candace-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 4</td>
+     <td> Гидро</td>
+     <td> Копьё</td>
+     <td>212</td>
+     <td>63</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Кирара</td>
+     <td> <img src="Картинки/kirara.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Дендро</td>
+     <td> Одноручный меч</td>
+     <td>223</td>
+     <td>39</td>
+     <td>4,3</td>
+  </tr>
+  <tr align="center">
+     <td> Кли</td>
+     <td> <img src="Картинки/klee-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Пиро</td>
+     <td> Катализатор</td>
+     <td>310</td>
+     <td>36</td>
+     <td>11,5</td>
+  </tr>
+  <tr align="center">
+     <td> Кокоми</td>
+     <td> <img src="Картинки/sangonomiya-kokomi-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Катализатор</td>
+     <td>234</td>
+     <td>7</td>
+     <td>56,1</td>
+  </tr>
+  <tr align="center">
+     <td> Коллеи</td>
+     <td> <img src="Картинки/collei-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 4</td>
+     <td> Дендро</td>
+     <td> Лук</td>
+     <td>199</td>
+     <td>44</td>
+     <td>1</td>
+  </tr>
+  <tr align="center">
+     <td> Кэ Цин</td>
+     <td> <img src="Картинки/keqing-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Электро</td>
+     <td> Одноручный меч</td>
+     <td>322</td>
+     <td>53</td>
+     <td>4,7</td>
+  </tr>
+  <tr align="center">
+     <td> Кэйя</td>
+     <td> <img src="Картинки/kaeya-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Одноручный меч</td>
+     <td>223</td>
+     <td>57</td>
+     <td>0,4</td>
+  </tr>
+  <tr align="center">
+     <td> Лайла</td>
+     <td> <img src="Картинки/layla.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Одноручный меч</td>
+     <td>216</td>
+     <td>46</td>
+     <td>2,7</td>
+  </tr>
+  <tr align="center">
+     <td> Лиза</td>
+     <td> <img src="Картинки/lisa-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Электро</td>
+     <td> Катализатор</td>
+     <td>231</td>
+     <td>69</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Линетт</td>
+     <td> <img src="Картинки/lynnette.png" width="30%"></td>
+     <td> Фонтейн</td>
+     <td> 4</td>
+     <td> Анемо</td>
+     <td> Одноручный меч</td>
+     <td>231</td>
+     <td>65</td>
+     <td>27,7</td>
+  </tr>
+  <tr align="center">
+     <td> Лини</td>
+     <td> <img src="Картинки/lynney.png" width="30%"></td>
+     <td> Фонтейн</td>
+     <td> 5</td>
+     <td> Пиро</td>
+     <td> Лук</td>
+     <td>318</td>
+     <td>26</td>
+     <td>98,9</td>
+  </tr>
+  <tr align="center">
+     <td> Мика</td>
+     <td> <img src="Картинки/mika.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Копьё</td>
+     <td>223</td>
+     <td>49</td>
+     <td>0,2</td>
+  </tr>
+  <tr align="center">
+     <td> Мона</td>
+     <td> <img src="Картинки/mona-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Катализатор</td>
+     <td>287</td>
+     <td>16</td>
+     <td>14,1</td>
+  </tr>
+  <tr align="center">
+     <td> Нахида</td>
+     <td> <img src="Картинки/nahida-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Дендро</td>
+     <td> Катализатор</td>
+     <td>298</td>
+     <td>2</td>
+     <td>97,8</td>
+  </tr>
+  <tr align="center">
+     <td> Нёвиллет</td>
+     <td> <img src="Картинки/neuvillette.jpg" width="30%"></td>
+     <td> Фонтейн</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Катализатор</td>
+     <td>208</td>
+     <td>13</td>
+     <td>99</td>
+  </tr>
+  <tr align="center">
+     <td> Нилу</td>
+     <td> <img src="Картинки/nilou-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Одноручный меч</td>
+     <td>229</td>
+     <td>14</td>
+     <td>21,4</td>
+  </tr>
+  <tr align="center">
+     <td> Нин Гуан</td>
+     <td> <img src="Картинки/ningguang-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Гео</td>
+     <td> Катализатор</td>
+     <td>212</td>
+     <td>60</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Ноэлль</td>
+     <td> <img src="Картинки/noelle-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Гео</td>
+     <td> Двуручный меч</td>
+     <td>191</td>
+     <td>61</td>
+     <td>0,2</td>
+  </tr>
+  <tr align="center">
+     <td> Райдэн</td>
+     <td> <img src="Картинки/raiden-shogun-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Электро</td>
+     <td> Копьё</td>
+     <td>337</td>
+     <td>6</td>
+     <td>54,7</td>
+  </tr>
+  <tr align="center">
+     <td> Ризли</td>
+     <td> <img src="Картинки/rizly.jpg" width="30%"></td>
+     <td> Фонтейн</td>
+     <td> 5</td>
+     <td> Крио</td>
+     <td> Катализатор</td>
+     <td>310</td>
+     <td>33</td>
+     <td>90,5</td>
+  </tr>
+  <tr align="center">
+     <td> Розария</td>
+     <td> <img src="Картинки/rosaria-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Копьё</td>
+     <td>240</td>
+     <td>31</td>
+     <td>1,8</td>
+  </tr>
+  <tr align="center">
+     <td> Рэйзор</td>
+     <td> <img src="Картинки/razor-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Элентро</td>
+     <td> Двуручный меч</td>
+     <td>233</td>
+     <td>68</td>
+     <td>0,2</td>
+  </tr>
+  <tr align="center">
+     <td> Сайно</td>
+     <td> <img src="Картинки/cyno-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Электро</td>
+     <td> Копьё</td>
+     <td>318</td>
+     <td>30</td>
+     <td>8,1</td>
+  </tr>
+  <tr align="center">
+     <td> Сара</td>
+     <td> <img src="Картинки/kujou-sara-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Электро</td>
+     <td> Лук</td>
+     <td>195</td>
+     <td>41</td>
+     <td>12,4</td>
+  </tr>
+  <tr align="center">
+     <td> Сахароза</td>
+     <td> <img src="Картинки/sucrose-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Анемо</td>
+     <td> Катализатор</td>
+     <td>169</td>
+     <td>24</td>
+     <td>3,5</td>
+  </tr>
+  <tr align="center">
+     <td> Саю</td>
+     <td> <img src="Картинки/sayu-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Анемо</td>
+     <td> Двуручный меч</td>
+     <td>244</td>
+     <td>62</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Син Цю</td>
+     <td> <img src="Картинки/xingqiu-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Гидро</td>
+     <td> Одноручный меч</td>
+     <td>201</td>
+     <td>5</td>
+     <td>71,2</td>
+  </tr>
+  <tr align="center">
+     <td> Синобу</td>
+     <td> <img src="Картинки/kuki-shinobu-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Электро</td>
+     <td> Одноручный меч</td>
+     <td>212</td>
+     <td>43</td>
+     <td>37,1</td>
+  </tr>
+  <tr align="center">
+     <td> Синь Янь</td>
+     <td> <img src="Картинки/xinyan-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Пиро</td>
+     <td> Двуручный меч</td>
+     <td>248</td>
+     <td>55</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Странник</td>
+     <td> <img src="Картинки/wanderer-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Анемо</td>
+     <td> Катализатор</td>
+     <td>327</td>
+     <td>52</td>
+     <td>14,7</td>
+  </tr>
+  <tr align="center">
+     <td> Сян Лин</td>
+     <td> <img src="Картинки/xiangling-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Пиро</td>
+     <td> Копьё</td>
+     <td>225</td>
+     <td>4</td>
+     <td>69,4</td>
+  </tr>
+  <tr align="center">
+     <td> Сяо</td>
+     <td> <img src="Картинки/xiao-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Анемо</td>
+     <td> Копьё</td>
+     <td>349</td>
+     <td>51</td>
+     <td>4,7</td>
+  </tr>
+  <tr align="center">
+     <td> Тарталья</td>
+     <td> <img src="Картинки/tartaglia-icon.png" width="30%"></td>
+     <td> Снежная</td>
+     <td> 5</td>
+     <td> Гидро</td>
+     <td> Лук</td>
+     <td>301</td>
+     <td>17</td>
+     <td>23,1</td>
+  </tr>
+  <tr align="center">
+     <td> Тигнари</td>
+     <td> <img src="Картинки/tighnari-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 5</td>
+     <td> Дендро</td>
+     <td> Лук</td>
+     <td>267</td>
+     <td>27</td>
+     <td>9,3</td>
+  </tr>
+  <tr align="center">
+     <td> Тома</td>
+     <td> <img src="Картинки/thoma-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Пиро</td>
+     <td> Копьё</td>
+     <td>201</td>
+     <td>56</td>
+     <td>2,6</td>
+  </tr>
+  <tr align="center">
+     <td> Фарузан</td>
+     <td> <img src="Картинки/faruzan-icon.png" width="30%"></td>
+     <td> Сумеру</td>
+     <td> 4</td>
+     <td> Анемо</td>
+     <td> Лук</td>
+     <td>196</td>
+     <td>47</td>
+     <td>5,2</td>
+  </tr>
+  <tr align="center">
+     <td> Фишль</td>
+     <td> <img src="Картинки/fischl-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Электро</td>
+     <td> Лук</td>
+     <td>244</td>
+     <td>21</td>
+     <td>6,9</td>
+  </tr>
+  <tr align="center">
+     <td> Фремине</td>
+     <td> <img src="Картинки/fremine.png" width="30%"></td>
+     <td> Фонтейн</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Двуручный меч</td>
+     <td>254</td>
+     <td>66</td>
+     <td>33,3</td>
+  </tr>
+  <tr align="center">
+     <td> Ху Тао</td>
+     <td> <img src="Картинки/hu-tao-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Пиро</td>
+     <td> Копьё</td>
+     <td>106</td>
+     <td>10</td>
+     <td>41,4</td>
+  </tr>
+  <tr align="center">
+     <td> Хэйдзо</td>
+     <td> <img src="Картинки/heizou.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 4</td>
+     <td> Анемо</td>
+     <td> Катализатор</td>
+     <td>225</td>
+     <td>38</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Ци Ци</td>
+     <td> <img src="Картинки/qiqi.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Крио</td>
+     <td> Одноручный меч</td>
+     <td>287</td>
+     <td>70</td>
+     <td>0,3</td>
+  </tr>
+  <tr align="center">
+     <td> Чжун Ли</td>
+     <td> <img src="Картинки/zhongli-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Гео</td>
+     <td> Копьё</td>
+     <td>251</td>
+     <td>8</td>
+     <td>66,5</td>
+  </tr>
+  <tr align="center">
+     <td> Чун Юнь</td>
+     <td> <img src="Картинки/chongyun-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Крио</td>
+     <td> Двуручный меч</td>
+     <td>223</td>
+     <td>67</td>
+     <td>0,4</td>
+  </tr>
+  <tr align="center">
+     <td> Шэнь Хэ</td>
+     <td> <img src="Картинки/shenhe-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 5</td>
+     <td> Крио</td>
+     <td> Копьё</td>
+     <td>303</td>
+     <td>18</td>
+     <td>43,4</td>
+  </tr>
+  <tr align="center">
+     <td> Эмбер</td>
+     <td> <img src="Картинки/amber-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 4</td>
+     <td> Пиро</td>
+     <td> Лук</td>
+     <td>223</td>
+     <td>71</td>
+     <td>0,1</td>
+  </tr>
+  <tr align="center">
+     <td> Эола</td>
+     <td> <img src="Картинки/eula-icon.png" width="30%"></td>
+     <td> Мондштарт</td>
+     <td> 5</td>
+     <td> Крио</td>
+     <td> Двуручный меч</td>
+     <td>342</td>
+     <td>50</td>
+     <td>3</td>
+  </tr>
+  <tr align="center">
+     <td> Юнь Цзынь</td>
+     <td> <img src="Картинки/yun-jin-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Гео</td>
+     <td> Копьё</td>
+     <td>191</td>
+     <td>28</td>
+     <td>1,7</td>
+  </tr>
+  <tr align="center">
+     <td> Янь Фэй</td>
+     <td> <img src="Картинки/yanfei-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Пиро</td>
+     <td> Катализатор</td>
+     <td>240</td>
+     <td>34</td>
+     <td>4,2</td>
+  </tr>
+  <tr align="center">
+     <td> Яо Яо</td>
+     <td> <img src="Картинки/yaoyao-icon.png" width="30%"></td>
+     <td> Ли Юэ</td>
+     <td> 4</td>
+     <td> Дендро</td>
+     <td> Копьё</td>
+     <td>212</td>
+     <td>48</td>
+     <td>4,7</td>
+  </tr>
+  <tr align="center">
+     <td> Яэ Мико</td>
+     <td> <img src="Картинки/yae-miko-icon.png" width="30%"></td>
+     <td> Инадзума</td>
+     <td> 5</td>
+     <td> Электро</td>
+     <td> Катализатор</td>
+     <td>339</td>
+     <td>23</td>
+     <td>29,6</td>
+  </tr>
+</table>
+<a href="#top"><p>Наверх</p></a>
+</body>
+</html>
